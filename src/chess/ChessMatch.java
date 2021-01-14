@@ -41,7 +41,7 @@ public class ChessMatch {
 
 	private void validateSourcePosition(Position position) {
 		if (!board.thereIsAPiece(position)) {
-			throw new ChessException("Não existe peça na posição de origem");
+			throw new ChessException("There is no piece on source position");
 		}
 	}
 
@@ -50,18 +50,18 @@ public class ChessMatch {
 	}
 
 	private void initialSetup() {
-		placeNewPiece('c', 1, new Rook(board, Color.BRANCO));
-		placeNewPiece('c', 2, new Rook(board, Color.BRANCO));
-		placeNewPiece('d', 2, new Rook(board, Color.BRANCO));
-		placeNewPiece('e', 2, new Rook(board, Color.BRANCO));
-		placeNewPiece('e', 1, new Rook(board, Color.BRANCO));
-		placeNewPiece('d', 1, new King(board, Color.BRANCO));
+		placeNewPiece('c', 1, new Rook(board, Color.WHITE));
+		placeNewPiece('c', 2, new Rook(board, Color.WHITE));
+		placeNewPiece('d', 2, new Rook(board, Color.WHITE));
+		placeNewPiece('e', 2, new Rook(board, Color.WHITE));
+		placeNewPiece('e', 1, new Rook(board, Color.WHITE));
+		placeNewPiece('d', 1, new King(board, Color.WHITE));
 
-		placeNewPiece('c', 7, new Rook(board, Color.PRETO));
-		placeNewPiece('c', 8, new Rook(board, Color.PRETO));
-		placeNewPiece('d', 7, new Rook(board, Color.PRETO));
-		placeNewPiece('e', 7, new Rook(board, Color.PRETO));
-		placeNewPiece('e', 8, new Rook(board, Color.PRETO));
-		placeNewPiece('d', 8, new King(board, Color.PRETO));
+		placeNewPiece('c', 7, new Rook(board, Color.BLACK));
+		placeNewPiece('c', 8, new Rook(board, Color.BLACK));
+		placeNewPiece('d', 7, new Rook(board, Color.BLACK));
+		placeNewPiece('e', 7, new Rook(board, Color.BLACK));
+		placeNewPiece('e', 8, new Rook(board, Color.BLACK));
+		placeNewPiece('d', 8, new King(board, Color.BLACK));
 	}
 }
